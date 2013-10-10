@@ -15,6 +15,7 @@ type Consumer struct {
 	events  chan straumur.Event
 }
 
+//TODO: Document different usage of queues.
 func NewConsumer(amqpURI, exchange, exchangeType, queueName, key, ctag string, durable, auto_delete bool) (*Consumer, error) {
 
 	c := &Consumer{
